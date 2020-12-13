@@ -1,9 +1,12 @@
 #!/bin/bash -x
-read hour;
 wage=20
-salary=$(($hour*$wage))
-case $hour in
-4)echo "Part Time Employee and his Salary is :" $salary;;
-8)echo "Full time Employee and his Salarry is:" $salary;;
-*)echo " That Person not a Employee of a Company";;
+full_time=1
+part_time=0
+check=$((RANDOM%2))
+case $check in
+$full_time)emp_hrs=8;;
+$part_time)emp_hrs=4;;
+*)emp_hrs=0;;
 esac
+salary=$(($emp_hrs*$wage))
+echo $salary
