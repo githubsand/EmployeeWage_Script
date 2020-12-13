@@ -16,7 +16,8 @@ if [ $k -gt $zero ]
 then
 salary=$(($k*$emprate*$workinghrs));
 echo $salary;
-else $zero
+else 
+    echo $zero
 fi
 
 
